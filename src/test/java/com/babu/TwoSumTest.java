@@ -1,13 +1,12 @@
 package com.babu;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.babu.leetcode.TwoSum;
 import org.junit.jupiter.api.Test;
 
 /**
- * Unit test for simple App.
+ * Unit test for Two Sum.
  */
 public class TwoSumTest {
 
