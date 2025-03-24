@@ -76,6 +76,11 @@ public class TwoSum {
         for (int i : twoSum.hashMapSolution(nums, target)) {
             System.out.print(i + " ");
         }
+        System.out.println();
+        System.out.println("Using Two Pointers: ");
+        for (int i : twoSum.sortedArraySolution(nums, target)) {
+            System.out.print(i + " ");
+        }
     }
 
     // Time complexity: O(n2)
@@ -100,6 +105,20 @@ public class TwoSum {
                 return new int[] {numMap.get(target - nums[i]), i};
             } else {
                 numMap.put(nums[i], i);
+            }
+        }
+        return null;
+    }
+
+    public int[] sortedArraySolution(int[] nums, int target) {
+        for (int i = 0, j = nums.length - 1; i <= j;) {
+            int targetSum = nums[i] + nums[j];
+            if (targetSum == target) {
+                return new int[] {i, j};
+            } else if (targetSum < target) {
+                i++;
+            } else {
+                j--;
             }
         }
         return null;
